@@ -1,8 +1,6 @@
 import 'package:destini/story_brain.dart';
 import 'package:flutter/material.dart';
 
-//TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
-
 void main() {
   runApp(const Destini());
 }
@@ -72,8 +70,9 @@ class _StoryPageState extends State<StoryPage> {
                     foregroundColor: Colors.white,
                   ),
                   child: Text(
-                    "Choice 1",
-                    style: TextStyle(
+                    // Step 13 - Use the storyBrain to get the text for choice 1.
+                    storyBrain.getChoice1(),
+                    style: const TextStyle(
                       fontSize: 20.0,
                     ),
                   ),
@@ -96,9 +95,9 @@ class _StoryPageState extends State<StoryPage> {
                     foregroundColor: Colors.white,
                   ),
                   child: Text(
-                    //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                    "Choice 2",
-                    style: TextStyle(
+                    // Step 14 - Use the storyBrain to get the text for choice 2.
+                    storyBrain.getChoice2(),
+                    style: const TextStyle(
                       fontSize: 20.0,
                     ),
                   ),
